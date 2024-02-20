@@ -1,0 +1,32 @@
+PLAN FRONTEND : REACT.js
+
+*A : PLATFORM PAGE HOME
+
+ 1 : NAV BAR(Login + SignUp + Logo + SearchBar)
+ 2 : MAIN(Offers Holder)
+ 3 : FOOTER(Contact)
+
+
+*B : SEARCH PAGE
+
+ 1 : Get All Offers With The Same Title Searched Or Same Category
+
+
+*C : OFFRE PAGE
+
+ 1 : Offre Details With Id
+ 2 : Postuler Or Recommande Buttons
+
+
+*D : PROFILE PAGE
+
+ 1 : Get Data For Profile With Role (Entreprise or Candidat) and Show It
+
+
+*E : ADMIN LOGIN PAGE --Done
+
+
+*F : Entreprise or Candidat LOGIN PAGE --Done
+
+
+*G : SIGNUP PAGE 

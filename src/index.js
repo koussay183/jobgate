@@ -1,17 +1,59 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// importation de react et react-router-dom
+import * as React from "react";
+import { createRoot } from "react-dom/client";
+import "./style/main.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
+
+import AdminLogin from "./pages/AdminLogin";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+
+// initilitation de router and paths
+const router = createBrowserRouter([
+  {
+    path: "*",
+    element: <div>HOME</div>,
+  },
+  {
+    path: "/search/:query",
+    element: <div>Search Page</div>,
+  },
+  {
+    path: "/offre/:id",
+    element: <div>OFFRE </div>,
+  },
+  {
+    // role = candidat ou entreprise
+    path: "/profile/:role/:id",
+    element: <div>Profile</div>,
+  },
+  {
+    // page de login de admin
+    path: "/admin/login",
+    element: <AdminLogin/>,
+  },
+  {
+    // admin dashboared (protection de la page => admin ne peut pas acceder sauf que a deja authentifier)
+    path: "/admin/dashbored",
+    element: <div>Admin dashbored</div>,
+  },
+  ,
+  {
+    path: "/login/:role",
+    element: <Login/>,
+  },
+  ,
+  {
+    path: "/signup",
+    element: <SignUp/>,
+  },
+]);
+
+// creation de router et injection a root dans index.html
+createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

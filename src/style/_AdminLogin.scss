@@ -1,0 +1,45 @@
+.AdminLogin {
+    background-color: $mainColor;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        width: 100%;
+        max-width: 500px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        div {
+            display: flex;
+            flex-direction: column;
+            label {
+                font-size: 2em;
+                font-weight: 600;
+            }
+            
+            input[type="password"] {
+                outline: none;
+                border: none;
+                background-color: white;
+                border-radius: 10px;
+                padding: 1em;
+            }
+            
+        }
+        input {
+            outline:none;
+            border: none;
+            background-color: white;
+            padding: 1em;
+            margin-top: .5em;
+            font-size: 1em;
+            text-transform: capitalize;
+            color: $mainColor;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
