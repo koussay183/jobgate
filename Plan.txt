@@ -1,6 +1,6 @@
 PLAN FRONTEND : REACT.js
 
-*A : PLATFORM PAGE HOME
+*A : PLATFORM PAGE HOME -- Done
 
  1 : NAV BAR(Login + SignUp + Logo + SearchBar)
  2 : MAIN(Offers Holder)
@@ -16,7 +16,6 @@ PLAN FRONTEND : REACT.js
 
  1 : Offre Details With Id
  2 : Postuler Or Recommande Buttons
-
 
 *D : PROFILE PAGE
 
