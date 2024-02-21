@@ -11,12 +11,13 @@ import {
 import AdminLogin from "./pages/AdminLogin";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Home from "./pages/Home";
 
 // initilitation de router and paths
 const router = createBrowserRouter([
   {
     path: "*",
-    element: <div>HOME</div>,
+    element: <Home/>,
   },
   {
     path: "/search/:query",
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp/>,
+  },
+  {
+    path: "/discover/genre/:id/:name",
+    element: <h1>Genre</h1>,
   },
 ]);
 

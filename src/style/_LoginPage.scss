@@ -53,3 +53,22 @@
         }
     }
 }
+
+.loginSwitcher {
+    
+    text-align: center;
+    margin-top: 1em;
+    color: white;
+}
+
+.goHomeBtn {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $mainColor;
+    font-weight: 600;
+}
