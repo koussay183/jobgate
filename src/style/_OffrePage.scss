@@ -1,0 +1,32 @@
+.offreDetlais {
+    width: 100%;
+    padding: 1em;
+    max-width: 800px;
+    margin:0 auto ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: $mainColor;
+        
+    }
+    img {
+        border-radius: 10px;
+    }
+    p{
+        text-align: justify;
+    }
+    .buttonsInOffreHolder {
+        button{
+            width: 200px;
+            margin: .5em;
+            outline: none;
+            border: none;
+            background-color: $mainColor;
+            padding: 1.5em;
+            color: white;
+            border-radius: 10px;
+        }
+    }
+}

@@ -25,7 +25,7 @@ function Row({title , genreId}) {
         <Link
           className="title"
           to={{
-            pathname: "/discover/genre/"+title+"/"+genreId,
+            pathname: "/discover/genre/"+genreId+"/"+title,
           }}
         >
           {title} <span>&#8594;</span>

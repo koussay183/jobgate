@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Offre({title , image , id}) {
   return (
-    <div className="Offre">
+    <Link className="Offre" to={`/offre/${id}`} style={{textDecoration : "none"}}>
         <span>{title}</span>
         <img className="imageInOffre" src={image}></img>
-    </div>
+    </Link>
   )
 }
 

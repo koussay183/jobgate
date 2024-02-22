@@ -12,6 +12,8 @@ import AdminLogin from "./pages/AdminLogin";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
+import GenresDiscover from "./pages/GenresDiscover";
+import AllAboutOffre from "./pages/AllAboutOffre";
 
 // initilitation de router and paths
 const router = createBrowserRouter([
@@ -25,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/offre/:id",
-    element: <div>OFFRE </div>,
+    element: <AllAboutOffre/>,
   },
   {
     // role = candidat ou entreprise
@@ -54,7 +56,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/discover/genre/:id/:name",
-    element: <h1>Genre</h1>,
+    element: <GenresDiscover/>,
   },
 ]);
 

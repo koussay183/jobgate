@@ -7,20 +7,16 @@ function Home() {
         {"id": "a8sdf92", "name": "Web Developer"},
         {"id": "1dkl0sd", "name": "Designer"},
         {"id": "c7ds91j", "name": "IT Specialist"},
-        {"id": "4lksdj3", "name": "UX/UI Designer"},
         {"id": "m2n9sdf", "name": "Web Developer"},
         {"id": "p0dsf84", "name": "IT Specialist"},
         {"id": "5ldskf3", "name": "Web Developer"},
-        {"id": "2plskdf", "name": "UX/UI Designer"},
         {"id": "9dsk2m1", "name": "Web Developer"},
         {"id": "sdf1k2j", "name": "Designer"},
         {"id": "klsdfj4", "name": "IT Specialist"},
         {"id": "o9dfk3s", "name": "Web Developer"},
-        {"id": "3sdfk5l", "name": "UX/UI Designer"},
         {"id": "6dskfl9", "name": "IT Specialist"},
         {"id": "z2klsdf", "name": "Designer"},
         {"id": "2lksdf0", "name": "Web Developer"},
-        {"id": "4sdfk6l", "name": "UX/UI Designer"},
         {"id": "lksd4f9", "name": "Web Developer"},
         {"id": "sdfgj32", "name": "Designer"},
         {"id": "2sdlk4j", "name": "IT Specialist"}
@@ -29,7 +25,7 @@ function Home() {
     <div className="Home">
         <nav >
             <div className="innerNav">
-                <h1 className="logo">JobGate.</h1>
+                <Link className="logo" to="/">JobGate.</Link>
                 <div className="menu">
                     <input type='search' placeholder="Search For a Job"></input>
                     <div className="links">
