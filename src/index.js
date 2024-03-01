@@ -14,6 +14,10 @@ import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import GenresDiscover from "./pages/GenresDiscover";
 import AllAboutOffre from "./pages/AllAboutOffre";
+import CandidatProfile from "./pages/CandidatProfile";
+import EntrepriseProfile from "./pages/EntrepriseProfile";
+import AddOffreForm from "./components/AddOffreForm";
+import OffersHolder from "./components/OffersHolder";
 
 // initilitation de router and paths
 const router = createBrowserRouter([
@@ -31,8 +35,23 @@ const router = createBrowserRouter([
   },
   {
     // role = candidat ou entreprise
-    path: "/profile/:role/:id",
-    element: <div>Profile</div>,
+    path: "/profile/c",
+    element:<CandidatProfile/> ,
+  },
+  {
+    // role = candidat ou entreprise
+    path: "/profile/e",
+    element:<EntrepriseProfile/> ,
+    children : [
+      {
+        path : "add-offre",
+        element : <AddOffreForm></AddOffreForm>
+      },
+      {
+        path : "my-offres",
+        element : <OffersHolder/>
+      }
+    ]
   },
   {
     // page de login de admin

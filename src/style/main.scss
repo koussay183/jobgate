@@ -19,3 +19,53 @@ $mainColor : #0d0d37;
 @import "NavBar";
 @import "GenresHolder";
 @import "OffrePage";
+
+.navlink{
+    text-decoration: none;
+    color: $mainColor;
+    background-color: white;
+    padding: 1em;
+    margin: .5em;
+    border-radius: 10px;
+
+}
+
+.addoffreform {
+    width: 100%;
+    max-width: 500px;
+    background-color: $mainColor;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 1em;
+    margin-top: 3em;
+    div{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        label{
+            font-size: 1.2em;
+        }
+        input , textarea{
+            outline: none;
+            border: none;
+            padding: 1em;
+            border-radius: 10px;
+            text-transform: capitalize;
+        }
+        textarea {
+            min-height: 300px;
+        }
+        
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color: white;
+        font-size: 1em;
+        margin-top: 1em;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        text-transform: capitalize;
+        padding: 1em;
+    }   
+}

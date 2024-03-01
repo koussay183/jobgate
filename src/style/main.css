@@ -510,4 +510,52 @@ footer .innerFooter h1 {
   padding: 1.5em;
   color: white;
   border-radius: 10px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: #0d0d37;
+  background-color: white;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 10px;
+}
+
+.addoffreform {
+  width: 100%;
+  max-width: 500px;
+  background-color: #0d0d37;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 1em;
+  margin-top: 3em;
+}
+.addoffreform div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.addoffreform div label {
+  font-size: 1.2em;
+}
+.addoffreform div input, .addoffreform div textarea {
+  outline: none;
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.addoffreform div textarea {
+  min-height: 300px;
+}
+.addoffreform input[type=submit] {
+  width: 100%;
+  background-color: white;
+  font-size: 1em;
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  text-transform: capitalize;
+  padding: 1em;
 }/*# sourceMappingURL=main.css.map */

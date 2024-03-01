@@ -1,5 +1,6 @@
 import React , {useState}from 'react'
-import { Link } from "react-router-dom"
+import { Link ,useNavigate  } from "react-router-dom"
+
 function SignUp() {
     const [role, setrole] = useState('c')
     const [fullName, setfullName] = useState("")
@@ -7,10 +8,26 @@ function SignUp() {
     const [phone, setphone] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
+    const navigate = useNavigate();
+    const handleSignup = async (e) => {
+        console.log(JSON.stringify({email : email , password : password}));
+        e.preventDefault();
+        const res = await fetch("http://localhost:3000/"+role+"/signup",
+        {
+          method : "POST",
+          body : JSON.stringify({email : email , password : password , fullName : fullName , name : ename , phoneNumber :phone}),
+          headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*"
+          },
+        })
+        
+        return navigate(`/login/${role}`)
+      }
   return (
     <div className='SignUp'>
         <Link to="/" className="goHomeBtn">Home</Link>
-        <form>
+        <form onSubmit={(e)=>handleSignup(e)}>
             <h1>SignUp {role == "c" ? "Candidat" : "Entreprise"}</h1>
             <div style={{flexDirection : "row"}} className="radbtnHolder">
                 <input type="radio" id="contactChoice1" name="role" value="c" onClick={(e)=>setrole(e.target.value)} checked={role === 'c'}/>

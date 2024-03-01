@@ -3,10 +3,23 @@ import { Link, useParams } from 'react-router-dom'
 
 function AllAboutOffre() {
     const {id} = useParams();
-    const [offre, setoffre] = useState({ id: "1aBcDeF",desc : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", title: "Software Developer", image: "https://picsum.photos/200" })
+    const [offre, setoffre] = useState({})
+    const [letter, setletter] = useState("")
+    const [cvLink, setcvLink] = useState("")
+    const [idCandidat, setidCandidat] = useState("")
     useEffect(()=>{
         console.log("get Data From Here");
+        const fetchData = async () => {
+            const res = await fetch("http://localhost:3000/c/get-offre/"+id)
+            const data = await res.json()
+            setoffre(data)
+        }
+        fetchData()
     },[])
+    const handlePostule = async (e) => {
+        e.preventDefault()
+        const res = await fetch("http://localhost:3000/c/postule/"+idCandidat+"/"+id,{method : "POST" ,headers: { "Content-Type": "application/json" } , body:JSON.stringify({letter , cvLink})})
+    }
   return (
     <div>
         <nav >
@@ -23,13 +36,27 @@ function AllAboutOffre() {
         </nav>
         <div className="offreDetlais">
             <h1>{offre?.title}</h1>
-            <img src={offre?.image}></img>
+            <img src={offre?.imageUrl}></img>
             <p>{offre?.desc}</p>
             <div className="buttonsInOffreHolder">
-                <button>Postuler</button>
                 <button>Recommender</button>
             </div>
         </div>
+        <form onSubmit={(e)=>handlePostule(e)} className="addoffreform">
+            <div>
+                <label>id Candidat</label>
+                <input placeholder="type Id" onChange={(e)=>setidCandidat(e.target.value)}></input>
+            </div>
+            <div>
+                <label>Cv Url</label>
+                <input placeholder="type image url" onChange={(e)=>setcvLink(e.target.value)}></input>
+            </div>
+            <div>
+                <label>letter</label>
+                <textarea placeholder="type title" onChange={(e)=>setletter(e.target.value)}></textarea>
+            </div>
+            <input type='submit' value="Postuler"></input>
+        </form>
     </div>
   )
 }
